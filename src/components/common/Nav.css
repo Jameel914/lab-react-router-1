@@ -51,3 +51,8 @@ header ul li a:hover {
   color: var(--black);
   border-bottom: 2px solid var(--black);
 }
+
+.active-link {
+  color: var(--black);
+  border-bottom: 2px solid var(--black);
+}

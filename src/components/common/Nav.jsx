@@ -1,4 +1,4 @@
-import React from "react";
+import { NavLink, Link } from "react-router-dom";
 import "./Nav.css";
 
 function Nav() {
@@ -6,18 +6,28 @@ function Nav() {
     <header>
       <article>
         <h1>
-          <a href="/">
+          <Link to="/">
             Northwest <span>Animal Hospital</span>
-          </a>
+          </Link>
         </h1>
       </article>
       <aside>
         <ul>
           <li>
-            <a href="/staff">All Staff</a>
+            <NavLink
+              to="/staff"
+              className={({ isActive }) => (isActive ? "active-link" : "")}
+            >
+              All Staff
+            </NavLink>
           </li>
           <li>
-            <a href="/pets">All Pets</a>
+            <NavLink
+              to="/pets"
+              className={({ isActive }) => (isActive ? "active-link" : "")}
+            >
+              All Pets
+            </NavLink>
           </li>
         </ul>
       </aside>
